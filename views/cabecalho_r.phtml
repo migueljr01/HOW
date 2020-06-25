@@ -1,0 +1,104 @@
+<?php
+date_default_timezone_set('America/Sao_Paulo');
+$cidade="Florianópolis";
+$mesc[1]="Janeiro";
+$mesc[2]="Fevereiro";
+$mesc[3]="Março";
+$mesc[4]="Abril";
+$mesc[5]="Maio";
+$mesc[6]="Junho";
+$mesc[7]="Julho";
+$mesc[8]="Agosto";
+$mesc[9]="Setembro";
+$mesc[10]="Outubro";
+$mesc[11]="Novembro";
+$mesc[12]="Dezembro";  
+$scAlturaTela=0;
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt_br" xml:lang="pt_BR">
+<head>
+<title>Sistema Datacenter - CLUSTER FLN</title >
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--META HTTP-EQUIV=Refresh CONTENT="60;URL=<?php echo $_SERVER['REQUEST_URI']; ?>" /-->
+<meta name="description" content="Sistema datacenter" />
+<link rel="shortcut icon" sizes="180x180" href="/img/icon-192.png" />
+<meta name="keywords" content="..., ..." />
+<link href="/css/css.css" rel="stylesheet" type="text/css" />
+<link href="/css/corpo.css" rel="stylesheet" type="text/css" />
+<link href="/css/login.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script type="text/javascript">
+    var browser=window.innerHeight;
+    var scroll=browser-220;
+    function id( el ){
+	return document.getElementById( el );
+}
+window.onload = function(){
+	id('scroll').style.height = scroll+'px';
+}
+</script>
+<style type="text/css">
+#scroll {
+    position: relative;
+    top: 90px;
+    height: 300px;
+    overflow:auto;
+}
+</style>
+</head>
+    <body >
+            <div id="cabec">
+                <div id="cabecalho">
+                    <img src="/img/logo.png" width="109px" height="39px">
+                </div>
+                <div id="cabecalho2">
+                    <B>SISTEMA DATACENTER</B>
+                </div>
+            </div>
+            <div id="menu">
+                <div id="menu1">
+                    <?php
+                    $menu=new menu();
+                    $menu->monta_menu($_SESSION['nivel_analista']);
+                    ?>
+                </div>
+                <div id="menu2">
+                    <?php
+                    $menu->login_out($_SESSION['nivel_analista']);
+                    ?>
+                </div>
+            </div>
+            <div id="infos">
+                <?php
+                echo "<div id=\"infos2\">\n";
+                    $mk=time();
+                    $hora=new conversaodata();
+                    $h=$hora->get_horac($mk);
+                    $d=$hora->get_dia($mk);
+                    $y=$hora->get_ano($mk);
+                    $m=$hora->get_mes($mk);
+                    echo $cidade.", ".$d." de ".$mesc[$m]." de ".$y." as ".$h;
+                echo "</div>\n";                
+                echo "<div id=\"infos1\">\n";
+                    $mk=time();
+                    $hora=$hora->get_hora($mk);
+                    $bemvindo=new saudacao;
+                    $bemvindo=$bemvindo->sauda($hora,$_SESSION['nivel_analista']);
+                    $saudacao=new basicViews();
+                    if(isset($_SESSION['olddata'])) $oldata=$_SESSION['olddata'];
+                    if(!isset($_SESSION['olddata'])) $oldata=0;
+                    
+                    if($_SESSION['nivel_analista']>=2)$saudacao->saudacao($_SESSION['nivel_analista'], $bemvindo, $_SESSION['nomec_analista'], $_SESSION['login_login'] );
+                    if($_SESSION['nivel_analista']==1)$saudacao->saudacao($_SESSION['nivel_analista'], $bemvindo, '' , '');
+                    if($mk>$oldata and $_SESSION['nivel_analista']>=2 ) echo "<span class=\"blink\">TROQUE SUA SENHA</span>";
+                    ?>
+                </div>
+            </div>
+            <div id="scroll">
+                <div id="conteudo1">
+<br />
+                   

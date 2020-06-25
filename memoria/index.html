@@ -1,0 +1,174 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+
+<html>
+  <head>
+<html lang="pt_br" xml:lang="pt_BR">
+<head>
+<title>Trabalho de Psicologia 2020/1</title >
+<meta charset="utf-8" />
+    <script language="JavaScript1.2" src="memory.js" type="text/javascript"></script>
+    <style>
+    body {
+        background-image: url(/img/Fundo-memoria.png);
+        width:  100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;         
+    }
+    </style>
+  </head>
+  <body bgcolor="#FFC6E5" onload="loadImages(10, 1, 1);">
+    <br /><br /><br /><br /><br /><br /><br />
+    <table align=center cellspacing="0" cellpadding="0" border="0">
+      <tr>
+        <td colspan="3"><img name="memory_id" src="images/cardfrente.png" width="545" height="5" border="0" alt=""></td>
+      </tr>
+      <tr>
+        <td>
+          <table cellspacing="0" cellpadding="2" border="0">
+            <tr>
+              <td><a href="javascript:showCard(0)"><img name="card1" src="images/cardfrente.png" width="140" height="145" border="0" alt=""></a></td>
+              <td><a href="javascript:showCard(1)"><img name="card2" src="images/cardfrente.png" width="140" height="145" border="0" alt=""></a></td>
+              <td><a href="javascript:showCard(2)"><img name="card3" src="images/cardfrente.png" width="140" height="145" border="0" alt=""></a></td>
+              <td><a href="javascript:showCard(3)"><img name="card4" src="images/cardfrente.png" width="140" height="145" border="0" alt=""></a></td>
+              <td><a href="javascript:showCard(4)"><img name="card5" src="images/cardfrente.png" width="140" height="145" border="0" alt=""></a></td>
+            </tr>
+            <tr>
+              <td><a href="javascript:showCard(5)"><img name="card6" src="images/cardfrente.png" width="140" height="145" border="0" alt=""></a></td>
+              <td><a href="javascript:showCard(6)"><img name="card7" src="images/cardfrente.png" width="140" height="145" border="0" alt=""></a></td>
+              <td><a href="javascript:showCard(7)"><img name="card8" src="images/cardfrente.png" width="140" height="145" border="0" alt=""></a></td>
+              <td><a href="javascript:showCard(8)"><img name="card9" src="images/cardfrente.png" width="140" height="145" border="0" alt=""></a></td>
+              <td><a href="javascript:showCard(9)"><img name="card10" src="images/cardfrente.png" width="140" height="145" border="0" alt=""></a></td>
+            </tr>
+            <tr>
+              <td><a href="javascript:showCard(10)"><img name="card11" src="images/cardfrente.png" width="140" height="145" border="0" alt=""></a></td>
+              <td><a href="javascript:showCard(11)"><img name="card12" src="images/cardfrente.png" width="140" height="145" border="0" alt=""></a></td>
+              <td><a href="javascript:showCard(12)"><img name="card13" src="images/cardfrente.png" width="140" height="145" border="0" alt=""></a></td>
+              <td><a href="javascript:showCard(13)"><img name="card14" src="images/cardfrente.png" width="140" height="145" border="0" alt=""></a></td>
+              <td><a href="javascript:showCard(14)"><img name="card15" src="images/cardfrente.png" width="140" height="145" border="0" alt=""></a></td>
+            </tr>
+            <tr>
+              <td><a href="javascript:showCard(15)"><img name="card16" src="images/cardfrente.png" width="140" height="145" border="0" alt=""></a></td>
+              <td><a href="javascript:showCard(16)"><img name="card17" src="images/cardfrente.png" width="140" height="145" border="0" alt=""></a></td>
+              <td><a href="javascript:showCard(17)"><img name="card18" src="images/cardfrente.png" width="140" height="145" border="0" alt=""></a></td>
+              <td><a href="javascript:showCard(18)"><img name="card19" src="images/cardfrente.png" width="140" height="145" border="0" alt=""></a></td>
+              <td><a href="javascript:showCard(19)"><img name="card20" src="images/cardfrente.png" width="140" height="145" border="0" alt=""></a></td>
+            </tr>
+          </table>
+        </td>
+        <td><img src="images/blank.gif" width="10" height="1" border="0" alt=""></td>
+        <td align="left" valign="top">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td><img src="images/blank.gif" width="90" height="2" border="0" alt=""></td>
+            </tr>
+            <tr>
+              <td><a href="javascript:startGame()"><img src="images/startstop1.gif" width="90" height="36" border="0" alt=""></a></td>
+            </tr>
+            <tr>
+              <td><img src="images/blank.gif" width="90" height="2" border="0" alt=""></td>
+            </tr>
+            <tr>
+              <td><a href="javascript:stopGame()"><img src="images/startstop4.gif" width="90" height="36" border="0" alt=""></a></td>
+            </tr>
+            <tr>
+              <td><img src="images/blank.gif" width="90" height="5" border="0" alt=""></td>
+            </tr>
+            <tr>
+              <td><img src="images/level.png" width="90" height="50" border="0" alt=""></td>
+            </tr>
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" border="0">
+                  <tr bgcolor="#9999FF">
+                    <td><img src="images/10.gif" width="8" height="17" border="0" alt=""></td>
+                    <td><a href="javascript:setLevel(-1)"><img src="images/plusminus3.gif" width="15" height="17" border="0" alt=""></a></td>
+                    <td><img src="images/10.gif" width="15" height="17" border="0" alt=""></td>
+                    <td><img src="images/4.gif" width="15" height="17" border="0" alt=""></td>
+                    <td><img src="images/10.gif" width="15" height="17" border="0" alt=""></td>
+                    <td><a href="javascript:setLevel(1)"><img src="images/plusminus1.gif" width="15" height="17" border="0" alt=""></a></td>
+                    <td><img src="images/10.gif" width="7" height="17" border="0" alt=""></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="images/10.gif" width="90" height="3" border="0" alt=""></td>
+            </tr>
+            <tr>
+              <td><img src="images/blank.gif" width="90" height="10" border="0" alt=""></td>
+            </tr>
+            <tr>
+              <td><img src="images/time.png" width="90" height="40" border="0" alt=""></td>
+            </tr>
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" border="0">
+                  <tr bgcolor="#9999FF">
+                    <td><img src="images/10.gif" width="15" height="17" border="0" alt=""></td>
+                    <td><img src="images/10.gif" width="15" height="17" border="0" alt=""></td>
+                    <td><img src="images/10.gif" width="15" height="17" border="0" alt=""></td>
+                    <td><img src="images/10.gif" width="15" height="17" border="0" alt=""></td>
+                    <td><img src="images/10.gif" width="15" height="17" border="0" alt=""></td>
+                    <td><img src="images/s.gif" width="15" height="17" border="0" alt=""></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="images/blank.gif" width="90" height="10" border="0" alt=""></td>
+            </tr>
+            <tr>
+              <td><img src="images/attempts.png" width="90" height="40" border="0" alt=""></td>
+            </tr>
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" border="0">
+                  <tr bgcolor="#9999FF">
+                    <td><img src="images/10.gif" width="15" height="17" border="0" alt=""></td>
+                    <td><img src="images/10.gif" width="15" height="17" border="0" alt=""></td>
+                    <td><img src="images/10.gif" width="15" height="17" border="0" alt=""></td>
+                    <td><img src="images/10.gif" width="15" height="17" border="0" alt=""></td>
+                    <td><img src="images/10.gif" width="15" height="17" border="0" alt=""></td>
+                    <td><img src="images/10.gif" width="15" height="17" border="0" alt=""></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="images/blank.gif" width="90" height="10" border="0" alt=""></td>
+            </tr>
+            <tr>
+              <td><img src="images/found.png" width="90" height="40" border="0" alt=""></td>
+            </tr>
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" border="0">
+                  <tr bgcolor="#9999FF">
+                    <td><img src="images/10.gif" width="15" height="17" border="0" alt=""></td>
+                    <td><img src="images/10.gif" width="15" height="17" border="0" alt=""></td>
+                    <td><img src="images/10.gif" width="15" height="17" border="0" alt=""></td>
+                    <td><img src="images/10.gif" width="15" height="17" border="0" alt=""></td>
+                    <td><img src="images/10.gif" width="15" height="17" border="0" alt=""></td>
+                    <td><img src="images/10.gif" width="15" height="17" border="0" alt=""></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="images/blank.gif" width="90" height="25" border="0" alt=""></td>
+            </tr>
+            <tr>
+              <td><a href="javascript:showHighScore()"><img src="images/highscore.png" width="100" height="40" border="0" alt=""></a></td>
+            </tr>
+         </table>
+        </td>
+      </tr>
+    </table>
+    <noscript>
+      This game needs JavaScript 1.2 or higher and PHP4
+    </noscript>
+
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<?php
+date_default_timezone_set('America/Sao_Paulo');
+?>
+<!DOCTYPE html >
+<html lang="pt_br" xml:lang="pt_BR">
+<head>
+<title>Trabalho de Psicologia 2020/1</title >
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="f617b25778b2c492fa95db23-text/javascript"></script>
+<script type="f617b25778b2c492fa95db23-text/javascript">
+		$(function() {
+
+			var theWindow        = $(window),
+			    $bg              = $("#bg"),
+			    aspectRatio      = $bg.width() / $bg.height();
+
+			function resizeBg() {
+
+				if ( (theWindow.width() / theWindow.height()) < aspectRatio ) {
+				    $bg
+				    	.removeClass()
+				    	.addClass('bgheight');
+				} else {
+				    $bg
+				    	.removeClass()
+				    	.addClass('bgwidth');
+				}
+
+			}
+
+			theWindow.resize(function() {
+				resizeBg();
+			}).trigger("resize");
+
+		});
+	</script>
+</head>
